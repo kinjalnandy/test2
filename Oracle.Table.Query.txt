@@ -1,0 +1,7 @@
+select a1.area as area,a1.customer_number as customer_number,a2.ordered_item as ordered_item,a1.service_start_date as sa_start_date,
+a1.end_date_active as sa_end_date,
+a2.start_date_active as sa_line_start_date,
+a2.end_date_active as sa_line_end_date,
+a1.agreement_number as agreement_number,a2.line_number as line_number,a2.num_of_bins as num_of_assets
+from xxave.int_salesagr A1, xxave.int_salesagr_lines A2
+where a1.agreement_number=a2.agreement_number
